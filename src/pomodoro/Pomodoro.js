@@ -43,13 +43,13 @@ function nextSession(focusDuration, breakDuration) {
   return (currentSession) => {
     if (currentSession.label === "Focusing") {
       return {
-        label: "Focusing",
-      timeRemaining: focusDuration * 60,
+     label: "On Break",
+     timeRemaining: breakDuration * 60,
       };
     }
     return {
-        label: "On Break",
-        timeRemaining: breakDuration * 60,
+        label: "Focusing",
+        timeRemaining: focusDuration * 60,
     };
   };
 }
